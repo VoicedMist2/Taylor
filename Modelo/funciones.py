@@ -60,3 +60,20 @@ def arccos(x, n):
 
     resultado += (pi/2) - arcsen(x, n)
     return resultado
+
+# Calcula senh x
+
+def senh(x, n):
+    resultado = 0
+    
+    for i in range(n):
+        resultado += elevado(x, 2*i + 1) /factorial(2*i + 1)
+    return resultado
+
+# Calcula cosh x
+def cosh(x, n):
+    resultado = 0
+    
+    for i in range(n):
+        resultado += elevado(x, 2 * i) / factorial(2 * i)
+    return resultado

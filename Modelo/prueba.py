@@ -71,3 +71,20 @@ def arccos(x, n):
 
 print(arccos(0.5, 10))
 ############################################################################
+
+def senh(x, n):
+    resultado = 0
+    
+    for i in range(n):
+        resultado += elevado(x, 2*i + 1) /factorial(2*i + 1)
+    return resultado
+print(senh(5, 100))
+############################################################################
+
+def cosh(x, n):
+    resultado = 0
+    
+    for i in range(n):
+        resultado += elevado(x, 2 * i) / factorial(2 * i)
+    return resultado
+print(cosh(5, 100))
