@@ -52,3 +52,11 @@ def arcsen(x, n):
         resultado += factorial(2 * i)* elevado(x, 2 * i + 1)/ (elevado(4, i) * elevado(factorial(i), 2) * (2 * i + 1))
     return resultado
 
+# Calcula arccos x solo para x en el intervalo [-1, 1]
+def arccos(x, n):
+    
+    resultado = 0
+    pi = 3.141592653589793
+
+    resultado += (pi/2) - arcsen(x, n)
+    return resultado
