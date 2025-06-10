@@ -43,3 +43,12 @@ def cos(x, n):
     for i in range(n):
         resultado += elevado(-1, i) * elevado(x, 2 * i) / factorial(2 * i)
     return resultado
+
+# Calcula arcsen x solo para x en el intervalo [-1, 1]
+
+def arcsen(x, n):
+    resultado = 0
+    for i in range(n):
+        resultado += factorial(2 * i)* elevado(x, 2 * i + 1)/ (elevado(4, i) * elevado(factorial(i), 2) * (2 * i + 1))
+    return resultado
+

@@ -49,3 +49,15 @@ def cos(x, n):
     return resultado
 
 print(cos(5, 100))
+
+############################################################################
+
+def arcsen(x, n):
+    resultado = 0
+    for i in range(n):
+        resultado += factorial(2 * i)* elevado(x, 2 * i + 1)/ (elevado(4, i) * elevado(factorial(i), 2) * (2 * i + 1))
+    return resultado
+
+print(arcsen(0.5, 10))
+
+############################################################################
