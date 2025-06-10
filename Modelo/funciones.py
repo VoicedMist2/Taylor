@@ -18,3 +18,9 @@ def factorial(n):
         resultado *= i
     return resultado
 
+#Calcula e ** x
+def calcular_e_x(x, n):
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado += elevado(x, i) / factorial(i)
+    return resultado
