@@ -9,6 +9,7 @@ def factorial(n):
         resultado *= i
     return resultado
 
+print(factorial(5))
 ############################################################################
 def elevado(x, n):
     
@@ -18,6 +19,8 @@ def elevado(x, n):
         resultado *= x
     return resultado
 
+print(elevado(2, 3))
+
 ############################################################################
 
 def calcular_e_x(x, n):
@@ -26,8 +29,23 @@ def calcular_e_x(x, n):
         resultado += elevado(x, i) / factorial(i)
     return resultado
 
-print(factorial(5))
-print(elevado(2, 3))
 print(calcular_e_x(5, 100))
 
 ############################################################################
+
+def sen(x, n):
+    resultado = 0
+    for i in range(n):
+        resultado += elevado(-1, i) * elevado(x, 2*i + 1) / factorial(2 * i + 1)
+    return resultado
+print(sen(5, 100))
+
+############################################################################
+
+def cos(x, n):
+    resultado = 0
+    for i in range(n):
+        resultado += elevado(-1, i) * elevado(x, 2 * i) / factorial(2 * i)
+    return resultado
+
+print(cos(5, 100))
