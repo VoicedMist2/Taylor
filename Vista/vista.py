@@ -16,5 +16,5 @@ class Vista_Series_Taylor:
         return x
 
     def mostrar_resultado(funcion, valor_ingresado, resultado):
-        print(funcion + "(" + valor_ingresado + ") = "+ resultado)
+        print(f"{funcion}({valor_ingresado}) = {resultado}")
 
