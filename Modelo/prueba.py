@@ -1,3 +1,4 @@
+
 ############################################################################
 def factorial(n):
 
@@ -7,9 +8,11 @@ def factorial(n):
     
     for i in range(1, n + 1):
         resultado *= i
+
     return resultado
 
-print(factorial(5))
+print(factorial(6))
+
 ############################################################################
 def elevado(x, n):
     
@@ -88,3 +91,4 @@ def cosh(x, n):
         resultado += elevado(x, 2 * i) / factorial(2 * i)
     return resultado
 print(cosh(5, 100))
+

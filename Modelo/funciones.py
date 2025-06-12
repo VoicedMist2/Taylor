@@ -1,13 +1,15 @@
 class Series_Taylor:
 
-    # Calcula x elevado a la n veces
-    def elevado(x, n):
-        
-        resultado = 1
+# Calcula x elevado a la n veces
 
+    def elevado(x, n):
+
+        resultado = 1
+     
         for _ in range(n):
             resultado *= x
         return resultado
+
 
     # Calcula el factorial de n
 
@@ -23,8 +25,11 @@ class Series_Taylor:
 
     #Calcula e ** x
 
+
     def calcular_e_x(x, n):
+        
         resultado = 1
+
         for i in range(1, n + 1):
             resultado += Series_Taylor.elevado(x, i) / Series_Taylor.factorial(i)
         return resultado
@@ -71,6 +76,7 @@ class Series_Taylor:
             resultado += Series_Taylor.elevado(x, 2*i + 1) / Series_Taylor.factorial(2*i + 1)
         return resultado
 
+
     # Calcula cosh x
     def cosh(x, n):
         resultado = 0
@@ -78,3 +84,5 @@ class Series_Taylor:
         for i in range(n):
             resultado += Series_Taylor.elevado(x, 2 * i) / Series_Taylor.factorial(2 * i)
         return resultado
+
+
