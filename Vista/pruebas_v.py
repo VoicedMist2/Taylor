@@ -18,3 +18,6 @@ class Vista_Series_Taylor:
     def mostrar_resultado(funcion, valor_ingresado, resultado):
         print(funcion + "(" + valor_ingresado + ") = "+ resultado)
 
+Vista_Series_Taylor.mostrar_menu()
+Vista_Series_Taylor.pedir_valor()
+Vista_Series_Taylor.mostrar_resultado("e^x", "5", "148.41")
