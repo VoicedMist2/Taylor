@@ -55,22 +55,26 @@ print(cos(5, 100))
 
 ############################################################################
 
-def arcsen(x, n):
-    resultado = 0
-    for i in range(n):
-        resultado += factorial(2 * i)* elevado(x, 2 * i + 1)/ (elevado(4, i) * elevado(factorial(i), 2) * (2 * i + 1))
-    return resultado
+def arcsen(x, n=10):
+        if x < -1 or x > 1:
+            return("El valor de x debe estar en el intervalo [-1, 1]")
+        resultado = 0
+        for i in range(n):
+            resultado += factorial(2 * i)* elevado(x, 2 * i + 1)/ (elevado(4, i) * elevado(factorial(i), 2) * (2 * i + 1))
+        return resultado
 
-print(arcsen(0.5, 10))
+print(arcsen(5, 10))
 
 ############################################################################
-def arccos(x, n):
-    
-    resultado = 0
-    pi = 3.141592653589793
+def arccos(x, n=10):
+        if x < -1 or x > 1:
+            return("El valor de x debe estar en el intervalo [-1, 1]")
+        
+        resultado = 0
+        pi = 3.141592653589793
 
-    resultado += (pi/2) - arcsen(x, n) 
-    return resultado
+        resultado += (pi/2) - arcsen(x)
+        return resultado
 
 print(arccos(0.5, 10))
 ############################################################################

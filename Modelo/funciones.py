@@ -2,7 +2,7 @@ class Series_Taylor:
 
 # Calcula x elevado a la n veces
 
-    def elevado(x, n):
+    def elevado(x,n):
 
         resultado = 1
      
@@ -26,7 +26,7 @@ class Series_Taylor:
     #Calcula e ** x
 
 
-    def calcular_e_x(x, n):
+    def calcular_e_x(x, n=100):
         
         resultado = 1
 
@@ -36,7 +36,7 @@ class Series_Taylor:
 
     # Calcula sen x
 
-    def sen(x, n):
+    def sen(x, n=100):
         resultado = 0
         for i in range(n):
             resultado += Series_Taylor.elevado(-1, i) * Series_Taylor.elevado(x, 2*i + 1) / Series_Taylor.factorial(2*i + 1)
@@ -44,7 +44,7 @@ class Series_Taylor:
 
     # Calcula cos x
 
-    def cos(x, n):
+    def cos(x, n=100):
         resultado = 0
         for i in range(n):
             resultado += Series_Taylor.elevado(-1, i) * Series_Taylor.elevado(x, 2 * i) / Series_Taylor.factorial(2 * i)
@@ -52,24 +52,28 @@ class Series_Taylor:
 
     # Calcula arcsen x solo para x en el intervalo [-1, 1]
 
-    def arcsen(x, n):
+    def arcsen(x, n=10):
+        if x < -1 or x > 1:
+            return("El valor de x debe estar en el intervalo [-1, 1]")
         resultado = 0
         for i in range(n):
             resultado += Series_Taylor.factorial(2 * i)* Series_Taylor.elevado(x, 2 * i + 1)/ (Series_Taylor.elevado(4, i) * Series_Taylor.elevado(Series_Taylor.factorial(i), 2) * (2 * i + 1))
         return resultado
 
     # Calcula arccos x solo para x en el intervalo [-1, 1]
-    def arccos(x, n):
+    def arccos(x, n=10):
+        if x < -1 or x > 1:
+            return("El valor de x debe estar en el intervalo [-1, 1]")
         
         resultado = 0
         pi = 3.141592653589793
 
-        resultado += (pi/2) - Series_Taylor.arcsen(x, n)
+        resultado += (pi/2) - Series_Taylor.arcsen(x)
         return resultado
 
     # Calcula senh x
 
-    def senh(x, n):
+    def senh(x, n=100):
         resultado = 0
         
         for i in range(n):
@@ -78,7 +82,7 @@ class Series_Taylor:
 
 
     # Calcula cosh x
-    def cosh(x, n):
+    def cosh(x, n=100):
         resultado = 0
         
         for i in range(n):
