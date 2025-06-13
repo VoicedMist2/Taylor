@@ -5,6 +5,7 @@ class Controlador_Series_Taylor:
         
     def iniciar():
 
+        vista.Vista_Series_Taylor.mostrar_menu()
         opcion = input("Selecciona una operacion: ")    
 
         x = vista.Vista_Series_Taylor.pedir_valor()
